@@ -1,14 +1,18 @@
 import React from 'react';
 
-function UserCard(props) {
-  return (
-    <div>
-      <h2>{props.name}</h2>
-      <p>Age: {props.age}</p>
-      <p>Email: {props.email}</p>
-      <p>Status: {props.online ? 'Online' : 'Offline'}</p>
-    </div>
-  );
+function ProductList(props) {
+  const products = props.products;
+  const productListItems = [];
+
+  products.forEach((product, index) => {
+    productListItems.push(
+      <li key={index}>
+        {product.name}: {product.inStock ? 'In Stock' : 'Out of Stock'}
+      </li>
+    );
+  });
+
+  return <ul>{productListItems}</ul>;
 }
 
-export default UserCard;
+export default ProductList;
