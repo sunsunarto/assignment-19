@@ -1,52 +1,17 @@
 import React from 'react';
-
-function Greeting(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
-
-function Age(props) {
-  return <p>You are {props.age} years old.</p>;
-}
-
-function Status(props) {
-  return <p>{props.online ? 'Online' : 'Offline'}</p>;
-}
-
-function FruitList(props) {
-  return (
-    <ul>
-      {props.fruits.map((fruit, index) => (
-        <li key={index}>{fruit}</li>
-      ))}
-    </ul>
-  );
-}
-
-function UserCard(props) {
-  return (
-    <div>
-      <h2>{props.user.name}</h2>
-      <p>Age: {props.user.age}</p>
-      <p>Email: {props.user.email}</p>
-    </div>
-  );
-}
+import ProductList from './ProductList.jsx';
 
 function App() {
-  const fruits = ['Apple', 'Banana', 'Cherry'];
-  const user = {
-    name: 'Sunaryo',
-    age: 30,
-    email: 'Sunaryo@example.com',
-  };
+  const products = [
+    { name: 'Apple', price: 1.0 },
+    { name: 'Banana', price: 0.5 },
+    { name: 'Cherry', price: 2.0 },
+  ];
 
   return (
     <div>
-      <Greeting name="Sunaryo" />
-      <Age age={15} />
-      <Status online={true} />
-      <FruitList fruits={fruits} />
-      <UserCard user={user} />
+      <h1>Product List</h1>
+      <ProductList products={products} />
     </div>
   );
 }
