@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Greeting(props) {
-  return <h1>Hello, {props.name}!</h1>;
+function Age(props) {
+  return <p>You are {props.age} years old.</p>;
 }
 
 function App() {
-  return <Greeting name="Sunaryo" />;
+  return <Age age={15} />;
 }
 
 export default App;
