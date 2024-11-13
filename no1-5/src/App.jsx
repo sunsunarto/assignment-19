@@ -1,11 +1,19 @@
 import React from 'react';
+import ChildButton from './ChildButton.jsx';
 
-function Age(props) {
-  return <p>You are {props.age} years old.</p>;
-}
+class App extends React.Component {
+  handleButtonClick = () => {
+    alert('Button clicked in child component!');
+  };
 
-function App() {
-  return <Age age={15} />;
+  render() {
+    return (
+      <div>
+        <h1>Passing Functions as Props</h1>
+        <ChildButton onClick={this.handleButtonClick} />
+      </div>
+    );
+  }
 }
 
 export default App;
