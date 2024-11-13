@@ -1,11 +1,6 @@
 import React from 'react';
 import ChildButton from './ChildButton.jsx';
 
-class App extends React.Component {
-  handleButtonClick = () => {
-    alert('Button clicked in child component!');
-  };
-}
 function Age(props) {
   return <p>You are {props.age} years old.</p>;
 }
@@ -35,7 +30,7 @@ function UserCard(props) {
 }
 
 function App() {
-  const fruits = ['Apple', 'Banana', 'Cherry'];
+  const fruits = ['Apple','Banana','Cherry'];
   const user = {
     name: 'Sunaryo',
     age: 15,
